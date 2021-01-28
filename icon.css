@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: initial;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.image{
+    width:100px;
+    height: 100px;
+   
+}
+.image:hover{
+   transform:Scale(2,2);
+   transition: transform 2s ease;
+
+}

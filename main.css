@@ -1,0 +1,89 @@
+:root{
+    --sizeIcon: 4.6rem; 
+}
+body{
+ background: url("assets/12.jpg");
+ background-size: cover;
+}
+.contenue{
+  text-align: center;
+}
+.contenue2{
+    text-align: center;
+}
+ul{
+    color:transparent;
+}
+.lien{
+width: 100%;
+padding: 0;
+   }
+.lien2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    height: 2px;
+    padding: 0;
+}
+.lien3{
+    margin: -15px 0;
+    width: 100%; 
+    padding: 0;
+}
+.lien4{
+    position: absolute;
+    left:0;
+    right:0;
+    padding: 0;
+    top: 180px;
+    height: 2px;
+}
+.exit{
+    position: relative;
+    padding: 0;
+    top: 75px;
+}
+li{
+    display: inline-block;
+    width: var(--sizeIcon);
+    height: var(--sizeIcon);
+    transform: rotate(45deg);
+    padding: 0px;
+    margin: 10px;
+    border: 10px;
+    border-style: solid;
+    border-color:#fff;
+    background:#ddd;
+}
+li img{
+    padding: 0em;
+    margin: 0em;
+    position: absolute;
+    transform: rotate(-45deg);
+    left:25%;
+    right:50%;
+    top: 25%;
+    bottom: 50%;
+    width: 38px;
+}
+/*width minimal 524 px*/
+li:hover{
+    border-radius: 55%;
+    transition : border-radius .5s;
+}
+li:not(:hover){
+    border-radius: 0%;
+    transition: border-radius .5s;
+}
+li:active{
+    background:radial-gradient(#ff0028,#ff0599);
+    transition: background-color .2s;
+}
+h1{
+    position: absolute;
+    text-align: center;
+}
+.vide{
+    background-color: white;
+}

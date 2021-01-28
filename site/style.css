@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    font-size: 14px;
+    color: red;
+
+}
+body{
+    font-size: 16px;
+    font-family: monospace;
+
+}
+footer{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    color: #ff0028;
+}
+p{
+    text-decoration:underline;
+
+}
+.navbar nav {
+    position: sticky;
+    float: left;
+}
+.navbar div{
+    float: right;
+}
