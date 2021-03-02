@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#light {
+  width: 50vw;
+  height: 100vh;
+  background-color: #f1f3f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dark {
+  width: 50vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-light {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: rgba(55, 85, 170, 0.15);
+  height: 140px;
+  width: 300px;
+  border: none;
+  border-radius: 35px;
+  background-color: #f1f3f6;
+  filter: drop-shadow(10px 10px 20px rgba(55, 85, 170, 0.1)) drop-shadow(-10px -10px 20px white);
+  box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+#btn-light:focus {
+  outline: none;
+  color: rgba(55, 85, 170, 0.25);
+  /*filter: drop-shadow(-10px -10px 20px rgba(55,85,170,0.1)) drop-shadow(10px 10px 20px rgba(255,255,255,1));*/
+  box-shadow: inset 15px 15px 25px rgba(55, 85, 170, 0.1), inset -15px -15px 25px white, -3px -3px 8px rgba(255, 255, 255, 0.3);
+}
+
+#btn-dark {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  height: 140px;
+  width: 300px;
+  border: none;
+  border-radius: 35px;
+  background-color: #1A1A1A;
+  filter: drop-shadow(10px 10px 20px #101010) drop-shadow(-10px -10px 20px #242424);
+  box-shadow: inset -3px -3px 8px rgba(36, 36, 36, 0.2);
+  transition: all 0.3s;
+}
+#btn-dark:focus {
+  outline: none;
+  color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 15px 15px 25px rgba(16, 16, 16, 0.5), inset -15px -15px 25px rgba(36, 36, 36, 0.5), -3px -3px 8px rgba(36, 36, 36, 0.2);
+}
