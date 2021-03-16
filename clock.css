@@ -1,0 +1,184 @@
+html,
+body {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #40407a;
+}
+
+.clock,
+.clock__face {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.clock {
+  background-color: #63cdda;
+  border-radius: 0.9rem;
+  box-shadow: 0 1rem 12rem #3742fa;
+  height: 12rem;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24rem;
+}
+.clock__face {
+  background-color: #111111;
+  border-radius: 0.9rem;
+  display: flex;
+  height: 6.9rem;
+  padding: 0.9rem;
+  width: 18rem;
+}
+.clock::before, .clock::after {
+  background-color: #111111;
+  border-radius: 0 0 3px 3px;
+  content: "";
+  display: block;
+  height: 0.45rem;
+  position: absolute;
+  top: 100%;
+  width: 3rem;
+}
+.clock::before {
+  left: 3rem;
+}
+.clock::after {
+  right: 3rem;
+}
+
+.number {
+  height: 6rem;
+  position: relative;
+  width: 3rem;
+}
+.number[data-nr="1"] .number__line--right {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="2"] .number__line--horizontal,
+.number[data-nr="2"] .number__line--top.number__line--right,
+.number[data-nr="2"] .number__line--bottom.number__line--left {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="3"] .number__line--horizontal,
+.number[data-nr="3"] .number__line--right {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="4"] .number__line--middle,
+.number[data-nr="4"] .number__line--right,
+.number[data-nr="4"] .number__line--top.number__line--left {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="5"] .number__line--horizontal,
+.number[data-nr="5"] .number__line--top.number__line--left,
+.number[data-nr="5"] .number__line--bottom.number__line--right {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="6"] .number__line--horizontal,
+.number[data-nr="6"] .number__line--bottom,
+.number[data-nr="6"] .number__line--top.number__line--left {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="7"] .number__line--right,
+.number[data-nr="7"] .number__line--top.number__line--horizontal {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="8"] .number__line {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="9"] .number__line--top,
+.number[data-nr="9"] .number__line--right,
+.number[data-nr="9"] .number__line--horizontal {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+.number[data-nr="0"] .number__line--top,
+.number[data-nr="0"] .number__line--bottom {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+}
+
+.number__line {
+  background-color: #222222;
+  border-radius: 0.225rem;
+  position: absolute;
+  transition: all 0.15s ease-out;
+}
+.number__line--horizontal {
+  height: 0.45rem;
+  left: 0.45rem;
+  width: 2.1rem;
+}
+.number__line--vertical {
+  height: 2.1rem;
+  width: 0.45rem;
+}
+.number__line--top {
+  top: 0.45rem;
+}
+.number__line--top.number__line--horizontal {
+  top: 0;
+}
+.number__line--bottom {
+  top: 3.45rem;
+}
+.number__line--bottom.number__line--horizontal {
+  left: 0.45rem;
+  top: 5.55rem;
+}
+.number__line--middle {
+  top: 2.775rem;
+}
+.number__line--left {
+  left: 0;
+}
+.number__line--right {
+  right: 0;
+}
+
+.dots {
+  height: 6rem;
+  position: relative;
+  width: 0.45rem;
+}
+.dots::before, .dots::after {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 0.45rem;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.dots::before {
+  margin-top: -0.9rem;
+}
+.dots::after {
+  margin-top: 0.9rem;
+}
+@keyframes blink {
+  0%, 24% {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.9rem #63cdda, 0 0 0.225rem white;
+  }
+  28%, 50%, 75%, 100% {
+    background-color: #222222;
+    box-shadow: none;
+  }
+}
