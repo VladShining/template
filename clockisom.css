@@ -1,0 +1,12 @@
+
+body, #canvas{
+    background: #191919;
+  }
+  #canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 850px;
+    height: 600px;
+    margin-left: 50px;
+  }
